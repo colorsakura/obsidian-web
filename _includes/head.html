@@ -1,0 +1,87 @@
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
+
+  <meta property="og:site_name" content="{{ site.title }}">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBYSXF7WKD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DBYSXF7WKD');
+  </script> -->
+  {{/*  加入waline匿名评论系统  */}}
+  <!-- 
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />  
+  -->
+  
+  {{/*  加入umami访问统计  */}}
+  <!-- <script async defer data-website-id="0dc17886-9c5c-4bb7-b097-104eb7c28c72" src="https://umami-production-7220.up.railway.app/umami.js"></script> -->
+  
+  {{/*  加入浩克访问统计  */}}
+  <!-- Start of Howxm client code snippet -->
+  <script>
+  function _howxm(){_howxmQueue.push(arguments)}
+  window._howxmQueue=window._howxmQueue||[];
+  _howxm('setAppID','352e66d3-cc84-42ce-ac80-a43a12abf84b');
+  (function(){var scriptId='howxm_script';
+  if(!document.getElementById(scriptId)){
+  var e=document.createElement('script'),
+  t=document.getElementsByTagName('script')[0];
+  e.setAttribute('id',scriptId);
+  e.type='text/javascript';e.async=!0;
+  e.src='https://static.howxm.com/sdk.js';
+  t.parentNode.insertBefore(e,t)}})();
+  </script>
+  <!-- End of Howxm client code snippet -->
+
+
+  
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+
+  {% if page.excerpt %}
+  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"/>
+  {% else %}
+  <meta property="og:description" content="{{ site.title | strip_html | strip_newlines | truncate: 160 }}"/>
+  {% endif %}
+
+  {% if page.title %}
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:type" content="article">
+  {% else %}
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:type" content="website">
+  {% endif %}
+
+  {% if page.date %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:author" content="{{ site.url }}/">
+  {% endif %}
+
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
+
+  <title>
+    {% if page.id == "home" %}
+      {{ site.title }}
+    {% else %}
+      {{ page.title }} &mdash; {{ site.title }}
+    {% endif %}
+  </title>
+</head>
