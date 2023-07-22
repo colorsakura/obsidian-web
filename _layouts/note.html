@@ -5,9 +5,8 @@ layout: default
 <article>
   <div>
     <h1>{{ page.title }}</h1>
-    <!-- 更新时间一直都是显示为构建时间，先屏蔽 -->
-    <time datetime="{{ page['date modified']}}">{% if page.type != 'pages' %}
-      创建于{{ page['date created'] }} ，更新于 {{ page['date modified'] }}
+    <time datetime="{{ page['date']}}">{% if page.type != 'pages' %}
+      创建于{{ page['date'] }}
       {% endif %}
     </time> 
   </div>
@@ -42,4 +41,6 @@ layout: default
 
 <!-- <hr> -->
 
-<!-- 图谱的性能太差，先屏蔽了 -->
+<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+
+{% include notes_graph.html %}
