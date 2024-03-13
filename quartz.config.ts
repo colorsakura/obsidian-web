@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Fly Go's Wiki Pages",
+    pageTitle: "Wiki Pages",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     },
     locale: "zh-CN",
     baseUrl: "wiki.52bilibili.com",
-    ignorePatterns: ["private", "H其他文件/模板", ".obsidian"],
+    ignorePatterns: ["private", "D每日笔记", "H其他文件/模板", ".obsidian"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
