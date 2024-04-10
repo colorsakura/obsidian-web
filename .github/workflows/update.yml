@@ -10,14 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ github.token }}
-          submodules: true
-
-      - name: Update submodule
         run: |
           git submodule update --init --remote
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           git commit -am "Auto sync obsidian content" || exit 0
           git push || exit 0
