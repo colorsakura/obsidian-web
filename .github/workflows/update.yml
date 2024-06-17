@@ -13,9 +13,8 @@ jobs:
 
       - name: Pull & update submodules
         run: |
-          git submodule update --init --recursive
-          git submodule update --recursive --remote
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git submodule update --init --remote
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@github.com"
           git commit -am "Auto sync obsidian content" || exit 0
           git push || exit 0
