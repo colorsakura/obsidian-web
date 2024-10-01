@@ -8,16 +8,16 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Wiki Pages",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    locale: "zh-CN",
+    baseUrl: "wiki.52bilibili.com",
+    ignorePatterns: ["private", "D每日笔记", "H其他文件/模板", ".obsidian"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
