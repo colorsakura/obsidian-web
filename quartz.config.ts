@@ -17,7 +17,7 @@ const config: QuartzConfig = {
 		},
 		locale: "zh-CN",
 		baseUrl: "wiki.52bilibili.com",
-		ignorePatterns: ["private", ".obsidian", "D每日笔记", "H其他文件/模板"],
+		ignorePatterns: ["private", ".obsidian", "D每日笔记", "F阅读娱乐", "H其他文件/模板"],
 		defaultDateType: "created",
 		theme: {
 			fontOrigin: "googleFonts",
